@@ -1,20 +1,20 @@
 import React, { Fragment } from 'react';
 import { useSelector } from 'react-redux';
-import { selectContacts, selectFilter } from 'redux/selectors';
+import { selectFilteredContacts } from 'redux/selectors';
 import ContactListItem from './ContactListItem';
 
 const ContactList = () => {
   
-  const filter = useSelector(selectFilter)
-  const contacts = useSelector(selectContacts)
+  // const filter = useSelector(selectFilter)
+  // const contacts = useSelector(selectContacts)
 
-  const filteredContacts = filter ? contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLocaleLowerCase())) : contacts;
+  // const filteredContacts = filter ? contacts.filter(contact => contact.name.toLowerCase().includes(filter.toLocaleLowerCase())) : contacts;
     
   return (
     <Fragment>
     <ul>            
       <ContactListItem 
-      contacts={filteredContacts}
+      contacts={useSelector(selectFilteredContacts)}
       />     
     </ul>
     </Fragment>
