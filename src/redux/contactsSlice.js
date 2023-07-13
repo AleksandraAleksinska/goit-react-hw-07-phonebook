@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-// import { nanoid } from "nanoid";
 import { fetchContacts, addContact, deleteContact } from "./operations";
 
 const handlePending = (state) => {
@@ -19,6 +18,7 @@ const contactsSlice = createSlice ({
         isLoading: false,
         error: null
     },
+    
     extraReducers: {
         [fetchContacts.pending] :handlePending,
         [addContact.pending]: handlePending,
