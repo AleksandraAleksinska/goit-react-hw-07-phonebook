@@ -10,7 +10,6 @@ const ContactForm = () => {
 
   const dispatch = useDispatch();
   const contacts = useSelector(selectContacts)  
-  console.log(contacts)
 
   const handleSubmit = (e) => {
     e.preventDefault();
