@@ -20,9 +20,10 @@ const ContactForm = () => {
       alert(form.elements.name.value + ' is already in contacts');
       } 
       else {
-      dispatch(addContact(form.elements.name.value, form.elements.number.value))       
+        const name = form.elements.name.value;
+        const phone = form.elements.number.value;
+      dispatch(addContact({ name, phone }))       
       }
-    
     form.reset();
   }
 
