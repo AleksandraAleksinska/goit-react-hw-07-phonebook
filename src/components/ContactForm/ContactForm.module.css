@@ -20,4 +20,10 @@
     padding-block: 4px;
     padding-inline: 8px;
     cursor: pointer;
+    
+    &:hover{
+        background-color: orange;
+        color:white;
+    }
+
 }

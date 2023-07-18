@@ -2,13 +2,24 @@
     margin-left: 10px;
     border-radius: 5px;
     border-color: aliceblue;
-    padding-block: 1px;
+    padding-block: 3px;
     padding-inline: 8px;
     cursor: pointer;
+    
+    &:hover{
+        background-color: orange;
+        color:white;
+    }
 }
 
 .listItem {
     display: flex;
     justify-content: space-between;
     width: 350px;
+}
+
+.contactList {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
